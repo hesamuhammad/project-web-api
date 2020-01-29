@@ -9,14 +9,23 @@ import Mock from './pages/Mock';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
 
-function App() {
-  const isLogin = JSON.parse(localStorage.getItem('status'));
-  return (
-    <Router>
-      <Header />
 
-    </Router>
+function App() {
+  const isLogin = JSON.parse(localStorage.getItem("status"));
+  return (
+      <Router>
+          <Header></Header>
+          {/* <Switch>
+          </Switch> */}
+          <Route path ="/login">
+                <Login/>
+          </Route>
+          <Route path ="/Mock">
+                <Mock/>
+          </Route>
+      </Router>
   );
 }
 
 export default App;
+

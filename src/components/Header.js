@@ -29,6 +29,9 @@ const Navreactstrap = () => {
             <NavItem>
               <NavLink href="/home">Home</NavLink>
             </NavItem>
+            <NavItem>
+                  <NavLink href="/mock">Mock</NavLink>
+            </NavItem>
 
 
             {isLogin ? (
@@ -40,6 +43,7 @@ const Navreactstrap = () => {
                 <NavItem>
                   <NavLink onClick={logOut}>Logout</NavLink>
                 </NavItem>
+
               </React.Fragment>
             ) : (
                 <React.Fragment>
