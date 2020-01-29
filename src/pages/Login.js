@@ -17,12 +17,9 @@ export default class Login extends Component {
   }
 
   handleSubmit = event => {
-    event.preventDefault(); //perven reloade after submit
-    const user = localStorage.getItem("user"); //get all user array from local storage
-    const { email, password } = this.state; //use state
-
-    //mengambil dari array 2 dimensi
-    // console.log(JSON.parse(localStorage.getItem("user")).gabung.gabungA)
+    event.preventDefault();
+    const user = localStorage.getItem("user");
+    const { email, password } = this.state;
 
     if (email === "") {
       alert("Email tidak boleh kosong");
@@ -39,7 +36,7 @@ export default class Login extends Component {
       localStorage.setItem("login", JSON.stringify(user));
       localStorage.setItem("status", true);
       // let errorMessage = alert("Login Gagal");
-      window.location = './todolist';
+      window.location = './home';
     }
   }
 
