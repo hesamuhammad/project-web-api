@@ -81,7 +81,6 @@ export default class Mock extends Component {
                     <div>
                         <h1 style={{ paddingTop: "25px", textAlign: "center" }}>Our List</h1>
 
-<<<<<<< HEAD
                 <div>
                 <h1 style={{paddingTop: "25px", textAlign: "center"}}>Our List</h1>
                 <Container
@@ -101,26 +100,6 @@ export default class Mock extends Component {
                 </Container>
             </div>
             </div>
-=======
-                        <Row>
-                            {data.map((item, index) => (
-                                <Col key={index} md="3" sm="6" xs="12" className="cardz">
-                                    <Card style={{ width: "200px", alignItems: "center", marginTop: "25px" }}>
-                                        <CardImg top width="100px" src={item.avatar} alt="Card image cap" />
-                                        <CardBody>
-                                            <CardTitle>{item.name}</CardTitle>
-                                            <CardSubtitle>{item.id}</CardSubtitle>
-                                            <Button onClick={() => this.handleEdit(item.id, item.name)}>Edit</Button>{" "}
-                                            <Button onClick={() => this.handleDelete(item.id)} style={{ backgroundColor: "red" }}>Remove</Button>
-                                        </CardBody>
-                                    </Card>
-                                </Col>
-                            ))}
-                        </Row>
-                    </div>
-                </Col>
-            </Container>
->>>>>>> a6e99ee793c3d6e1757cbd19824140babb9b7555
         )
     }
 }
