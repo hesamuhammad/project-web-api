@@ -13,18 +13,34 @@ function App() {
   const isLogin = JSON.parse(localStorage.getItem("status"));
   return (
     <Router>
-      <Header></Header>
-      {/* <Switch>
-          </Switch> */}
-      <Route path="/">
-        <Home />
-      </Route>
-      <Route path="/login">
-        <Login />
-      </Route>
-      <Route path="/Mock">
-        <Mock />
-      </Route>
+      <Header />
+
+      <Switch>
+        <Route exact path="/home">
+          <Home />
+        </Route>
+
+        <Route exact path="/login/">
+          <Login />
+        </Route>
+
+        <Route exact path="/register/">
+          <Register />
+        </Route>
+
+        <Route exact path="/profile/">
+          <Profile />
+        </Route>
+
+        <Route exact path="/mock/">
+          <Mock />
+        </Route>
+
+        <Route exact path="/bebas/">
+          <Bebas />
+        </Route>
+
+      </Switch>
     </Router>
   );
 }

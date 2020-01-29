@@ -29,15 +29,20 @@ const Navreactstrap = () => {
             <NavItem>
               <NavLink href="/home">Home</NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="/mock">Mock</NavLink>
-            </NavItem>
 
 
             {isLogin ? (
               <React.Fragment>
                 <NavItem>
                   <NavLink href="/profile">Profile</NavLink>
+                </NavItem>
+
+                <NavItem>
+                  <NavLink href="/mock">Mock</NavLink>
+                </NavItem>
+
+                <NavItem>
+                  <NavLink href="/bebas">Bebas</NavLink>
                 </NavItem>
 
                 <NavItem>
