@@ -30,7 +30,7 @@ const Navreactstrap = () => {
               <NavLink href="/home">Home</NavLink>
             </NavItem>
             <NavItem>
-                  <NavLink href="/mock">Mock</NavLink>
+              <NavLink href="/mock">Mock</NavLink>
             </NavItem>
 
 
@@ -50,7 +50,6 @@ const Navreactstrap = () => {
                   <NavItem>
                     <NavLink href="/login">Login</NavLink>
                   </NavItem>
-
                   <NavItem>
                     <NavLink href="/registration">Register</NavLink>
                   </NavItem>
