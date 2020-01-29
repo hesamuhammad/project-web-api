@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Redirect, } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Bebas from './pages/Bebas';
 import Home from './pages/Home';
@@ -20,25 +20,33 @@ function App() {
           <Home />
         </Route>
 
-        <Route exact path="/login/">
-          <Login />
-        </Route>
+        {/* jika sudah login */}
+        {isLogin ? (
+          <Fragment>
+            <Route exact path="/profile">
+              <Profile />
+            </Route>
 
-        <Route exact path="/register/">
-          <Register />
-        </Route>
+            <Route exact path="/mock">
+              <Mock />
+            </Route>
 
-        <Route exact path="/profile/">
-          <Profile />
-        </Route>
+            <Route exact path="/bebas">
+              <Bebas />
+            </Route>
+          </Fragment>
+        ) : (
+            <Fragment>
+              {/* // jika belum login */}
+              <Route exact path="/login">
+                <Login />
+              </Route>
 
-        <Route exact path="/mock/">
-          <Mock />
-        </Route>
-
-        <Route exact path="/bebas/">
-          <Bebas />
-        </Route>
+              <Route exact path="/registration">
+                <Register />
+              </Route>
+            </Fragment>
+          )}
 
       </Switch>
     </Router>
