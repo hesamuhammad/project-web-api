@@ -88,7 +88,7 @@ export default class Mock extends Component {
                     <CardImg top width="100px" src={item.avatar} alt="Card image cap" />
                     <CardBody>
                         <CardTitle>{item.name}</CardTitle>
-                        <CardSubtitle>{item.id}</CardSubtitle>
+                        <CardSubtitle>{item.id} <br/> {item.country} <br/> {item.city}</CardSubtitle>
                         <Button onClick = {() => this.handleEdit(item.id, item.name)}>Edit</Button>{" "}
                         <Button onClick = {() => this.handleDelete(item.id)} style ={{backgroundColor: "red"}}>Remove</Button>
                     </CardBody>
