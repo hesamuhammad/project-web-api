@@ -4,13 +4,11 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav, NavItem, NavLink,
-  DropdownToggle, DropdownItem, UncontrolledDropdown, DropdownMenu
+  Nav, NavItem, NavLink
 } from 'reactstrap';
-// import { Link } from 'react-router-dom';
 
 
-const Navreactstrap = (props) => {
+const Navreactstrap = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const logOut = () => {
@@ -28,69 +26,25 @@ const Navreactstrap = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <UncontrolledDropdown setActiveFromChild>
-              <DropdownToggle tag="a" className="nav-link" caret>
-                Css Framework
-                            </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem>
-                  <NavLink href="/react-bootstrap" className="text-danger">React Bootstrap</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                  <NavLink href="/" className="text-danger">Reactstrap Home</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                  <NavLink href="/card" className="text-danger">Reactstrap Card</NavLink>
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            {/* <NavItem>
-                            <NavLink href="/manual">Manual</NavLink>
-                        </NavItem> */}
-
-            <UncontrolledDropdown setActiveFromChild>
-              <DropdownToggle tag="a" className="nav-link" caret>
-                Life Circle
-                            </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem>
-                  <NavLink href="/lifecircle" className="text-danger">Life Circle</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                  <NavLink href="/axiospost" className="text-danger">Axios Post</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                  <NavLink href="/axios-card" className="text-danger">Axios Card</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                  <NavLink href="/axios-card-hooks" className="text-danger">Axios Card Hooks</NavLink>
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-
-            <UncontrolledDropdown setActiveFromChild>
-              <DropdownToggle tag="a" className="nav-link" caret>
-                Todo List
-                            </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem>
-                  <NavLink href="/todolist" className="text-danger">Todo List Class</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                  <NavLink href="/todo-list-hook" className="text-danger">Todo List Hooks</NavLink>
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-
-
             <NavItem>
-              <NavLink href="/card">Home</NavLink>
+              <NavLink href="/home">Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/mock">Mock</NavLink>
             </NavItem>
 
+
             {isLogin ? (
-              <NavItem>
-                <NavLink onClick={logOut}>Logout</NavLink>
-              </NavItem>
+              <React.Fragment>
+                <NavItem>
+                  <NavLink href="/profile">Profile</NavLink>
+                </NavItem>
+
+                <NavItem>
+                  <NavLink onClick={logOut}>Logout</NavLink>
+                </NavItem>
+
+              </React.Fragment>
             ) : (
                 <React.Fragment>
                   <NavItem>
