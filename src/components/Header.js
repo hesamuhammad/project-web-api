@@ -41,6 +41,14 @@ const Navreactstrap = () => {
                 </NavItem>
 
                 <NavItem>
+                  <NavLink href="/mock">Mock</NavLink>
+                </NavItem>
+
+                <NavItem>
+                  <NavLink href="/bebas">Bebas</NavLink>
+                </NavItem>
+
+                <NavItem>
                   <NavLink onClick={logOut}>Logout</NavLink>
                 </NavItem>
 
