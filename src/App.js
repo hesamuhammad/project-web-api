@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-// import './App.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Header from './components/Header';
 import Bebas from './pages/Bebas';
@@ -17,11 +16,17 @@ function App() {
       <Header />
 
       <Switch>
+        {/* <Route exact path="/">
+          <Home />
+        </Route> */}
+      </Switch>
+
+      {/* <Switch>
         <Route exact path="/">
           <Home />
-        </Route>
+        </Route> */}
 
-        <Route exact path="/login">
+      {/* <Route exact path="/login">
           <Login />
         </Route>
 
@@ -45,9 +50,9 @@ function App() {
           </Fragment>
         ) : (
             <Redirect to="/login" />
-          )}
+          )} */}
 
-      </Switch>
+      {/* </Switch> */}
     </Router>
   );
 }
