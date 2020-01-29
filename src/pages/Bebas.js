@@ -15,6 +15,7 @@ import axios from "axios";
 
 export default function Bebas() {
   const [allData, setAllData] = useState([]);
+  const [name, setName] = useState("");
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
 
@@ -109,6 +110,20 @@ export default function Bebas() {
       {!loading ? (
         <Fragment>
           <Col md="12" xs="12">
+
+            <form onSubmit={this.handleSubmit}>
+              <input
+                type="text"
+                value={name}
+                onChange={this.handleChange}
+                placeholder="Put your name here"
+                style={{}} />
+              <button
+                type="submit"
+              >
+                input
+                        </button>
+            </form>
             <Button color="success" onClick={handleSubmit}>
               Add
             </Button>
