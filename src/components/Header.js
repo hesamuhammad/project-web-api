@@ -37,7 +37,7 @@ const Navreactstrap = () => {
                 </NavItem>
 
                 <NavItem>
-                  <NavLink href="/bebas">Bebas</NavLink>
+                  <NavLink href="/bebas">Project</NavLink>
                 </NavItem>
 
                 <NavItem style={{ cursor: "pointer" }}>

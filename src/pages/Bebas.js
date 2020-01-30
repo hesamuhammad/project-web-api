@@ -38,8 +38,9 @@ export default function Bebas() {
   };
 
   return (
-    <Container style={{ marginTop: "20px" }}>
+    <Container style={{ marginTop: "20px", marginTop: "70px" }}>
       <Col md="12" xs="12">
+      <h2>Our Portofolio</h2>
         <Row>
           {allData.map((item, index) => {
             return (

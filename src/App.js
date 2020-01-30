@@ -20,9 +20,9 @@ function App() {
         <Route exact path="/home">
           <Home />
         </Route>
-            <Route exact path="/mock">
-              <Mock />
-            </Route>
+        <Route exact path="/mock">
+          <Mock />
+        </Route>
 
         {/* jika sudah login */}
         {isLogin ? (
@@ -50,7 +50,7 @@ function App() {
           )}
 
       </Switch>
-      <Copyright/>
+      {/* <Copyright/> */}
     </Router>
   );
 }
