@@ -42,7 +42,7 @@ export default class Login extends Component {
       localStorage.setItem("login", JSON.stringify(user));
       localStorage.setItem("status", true);
       alert("Login Sukses");
-      window.location = './index.html';
+      window.location = './';
     } else {
       alert("Login Gagal");
       window.location = './';
