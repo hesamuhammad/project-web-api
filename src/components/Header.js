@@ -26,11 +26,11 @@ const Navreactstrap = () => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            {isLogin ? (
-              <React.Fragment>
                 <NavItem>
                   <NavLink href="/profile">Founder</NavLink>
                 </NavItem>
+            {isLogin ? (
+              <React.Fragment>
 
                 <NavItem>
                   <NavLink href="/mock">Officer</NavLink>
