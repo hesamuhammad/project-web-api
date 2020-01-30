@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import {
   Carousel,
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
   CarouselCaption,
-  Container
+  Container,
+  Row,
+  Col
 } from 'reactstrap';
+
 
 const items = [
   {
@@ -62,7 +65,7 @@ const Example = (props) => {
   });
 
   return (
-    <div>
+    <Fragment>
 
       <Container
         style={{ marginTop: "50px", paddingBottom: "80px" }}>
@@ -84,8 +87,9 @@ const Example = (props) => {
           <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
           <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
         </Carousel>
+
       </Container>
-    </div>
+    </Fragment>
   );
 }
 

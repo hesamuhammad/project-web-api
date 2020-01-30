@@ -9,6 +9,7 @@ import Profile from './pages/Profile';
 import Register from './pages/Register';
 import Mock from './pages/Mock'
 // import Copyright from './components/Copyright';
+import Footer from './components/Footer';
 
 function App() {
   const isLogin = JSON.parse(localStorage.getItem("status"));
@@ -19,9 +20,11 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+          <Footer />
         </Route>
         <Route exact path="/mock">
           <Mock />
+          <Footer />
         </Route>
 
         {/* jika sudah login */}
@@ -29,11 +32,13 @@ function App() {
           <Fragment>
             <Route exact path="/profile">
               <Profile />
+              <Footer />
             </Route>
 
 
             <Route exact path="/bebas">
               <Bebas />
+              <Footer />
             </Route>
           </Fragment>
         ) : (
@@ -41,10 +46,12 @@ function App() {
               {/* // jika belum login */}
               <Route exact path="/login">
                 <Login />
+                <Footer />
               </Route>
 
               <Route exact path="/registration">
                 <Register />
+                <Footer />
               </Route>
             </Fragment>
           )}
