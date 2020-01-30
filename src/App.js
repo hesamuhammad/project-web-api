@@ -50,7 +50,7 @@ function App() {
           )}
 
       </Switch>
-      <Copyright/>
+      {/* <Copyright/> */}
     </Router>
   );
 }
