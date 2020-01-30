@@ -12,17 +12,17 @@ const items = [
   {
     src: 'https://www.tribaeast.com/wp-content/uploads/2017/07/Singapore-1-Altitude-Viewing-Gallery-Sunset-View-800x400.png',
     altText: 'Slide 1',
-    caption: 'Slide 1'
+    caption: 'Anywhere'
   },
   {
     src: 'https://lh3.googleusercontent.com/9XANu0kkl94p8G9WgLUL14Ot1ROi1a1Hbw1Tpzb78Z9HaMsxywAA0sbLm0cwWt15PIfIHxUmds_7QONbYkowaWAMXbBSKFCb6SwfyKOWRV4FfHqJOXdqCVvwEPfEJiIRRmCf5frq8W8YcLbi9fj5dvFJezbcTpgqz-OKcWh9MaI0Pj6IaKgrQPkTq6dgjSQIpkqhdbJYWPMLvWrHxiyPWDZEmMGRIzd8cidTCVQHG3uPk8MowwnBpgy2Ptr3U_PU8JtuN3u90Xnp-noeGSYOMOmgRWBFig1rokY9AQjAPp6-e40OTGSjdpmJhomrVDyLZIBtPvOwS9_5TlNmtLG2x5i23rBQmuVyqSAJsshervLggFikmPGHx4VxfaRbiih2pH47F6mvjbY5U14yKCGFEO8PqdYmBpAS2hWjme5evNuN8Uj6fbvXMAAQ1KCOVfPHEtjz0LPJrntsGj_cy0RiVvN2YV6CMe2c0YPadHRDbKUbwQdod99HB6q6nSzzm8qWXmpaY8QSe9A0wdm7Uf5mNE8vNNGMLIg4UBgxZNfrGeom_Rvubt2SOufPsV8-RT7ZCsumOg=w800-h400-p',
     altText: 'Slide 2',
-    caption: 'Slide 2'
+    caption: 'Anytime'
   },
   {
     src: 'https://www.pentasia.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdGpKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e345e18802353f2726ceec61269b1d820d054012/Malta3-Pentasia-800x400.jpg',
     altText: 'Slide 3',
-    caption: 'Slide 3'
+    caption: 'Anyone'
   }
 ];
 

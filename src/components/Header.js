@@ -13,7 +13,7 @@ const Navreactstrap = () => {
   const toggle = () => setIsOpen(!isOpen);
   const logOut = () => {
     localStorage.setItem("status", false);
-    window.location = './';
+    window.location = './home';
   }
   const isLogin = JSON.parse(localStorage.getItem("status"));
 
@@ -37,10 +37,10 @@ const Navreactstrap = () => {
                 </NavItem>
 
                 <NavItem>
-                  <NavLink href="/bebas">Bebas</NavLink>
+                  <NavLink href="/bebas">Project</NavLink>
                 </NavItem>
 
-                <NavItem style={{cursor:"pointer"}}>
+                <NavItem style={{ cursor: "pointer" }}>
                   <NavLink onClick={logOut}>Logout</NavLink>
                 </NavItem>
 
