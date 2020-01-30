@@ -129,7 +129,7 @@ export default function Mock() {
                   <CardSubtitle><br/>{item.country}<br/>
                   {item.job}<br/><br/>{item.phone}<br/>{item.mail}</CardSubtitle>
                   <Button onClick={() => toggle(item.id)}
-                  style={{marginTop: "15px", marginRight: "2px"}}>Edit</Button>
+                  style={{marginTop: "15px", marginRight: "2px"}}>Edit JOB</Button>
                   {" "}
                   <Button
                     onClick={() => handleDelete(item.id)}
@@ -145,10 +145,10 @@ export default function Mock() {
         })}
       </Container>
       <Modal isOpen={modal} toggle={toggle}>
-        <ModalHeader>Want to edit name ?</ModalHeader>
+        <ModalHeader>THINKS TWICE BEFORE EDITING !!!</ModalHeader>
         <ModalBody>
           <input
-            placeholder="edit disini"
+            placeholder="Your new job"
             onChange={handleChangeModal}
             value={inputModal}
           />

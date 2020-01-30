@@ -49,11 +49,11 @@ export default class Register extends Component {
 
               <FormGroup>
                 <Label>Address</Label>
-                <Input type="textarea" name="alamat" id="alamat" placeholder="Your Adress" onChange={this.handleChange} value={this.state.alamat} />
+                <Input type="textarea" name="alamat" id="alamat" placeholder="Your Address" onChange={this.handleChange} value={this.state.alamat} />
               </FormGroup>
               <FormGroup>
                 <Label for="examplePassword">Password</Label>
-                <Input type="password" name="password" id="password" placeholder="password" onChange={this.handleChange} value={this.state.password} />
+                <Input type="password" name="password" id="password" placeholder="Your Password" onChange={this.handleChange} value={this.state.password} />
               </FormGroup>
               <Button>Submit</Button>
             </Form>
