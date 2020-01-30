@@ -23,13 +23,13 @@ function App() {
             <Route exact path="/mock">
               <Mock />
             </Route>
+            <Route exact path="/profile">
+              <Profile />
+            </Route>
 
         {/* jika sudah login */}
         {isLogin ? (
           <Fragment>
-            <Route exact path="/profile">
-              <Profile />
-            </Route>
 
 
             <Route exact path="/bebas">
