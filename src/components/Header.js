@@ -55,8 +55,6 @@ const Navreactstrap = () => {
                   </NavItem>
                 </React.Fragment>
               )}
-
-
           </Nav>
         </Collapse>
       </Navbar>
