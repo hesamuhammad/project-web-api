@@ -8,6 +8,7 @@ export default class Login extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      name: '',
       email: "",
       password: ""
     };
@@ -18,31 +19,39 @@ export default class Login extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const user = localStorage.getItem("user");
-    const { email, password } = this.state;
 
-    if (email === "") {
+    const user = {
+      email: this.state.email,
+      password: this.state.password
+    };
+    const { email, password } = this.state;
+    let userSave = JSON.parse(localStorage.getItem('user'));
+
+    if (userSave == null) {
+      alert("Anda Belum Register");
+      window.location = './registration';
+    } else if (email === "") {
       alert("Email tidak boleh kosong");
     } else if (password === "") {
       alert("Password tidak boleh kosong");
-    } else if (email === user.email && password === user.password) {
-      alert("Login Sukses");
-      window.location = './index.html';
-    } else {
+    } else if (user.email === userSave.email && user.password === userSave.password) {
       const user = {
         email: this.state.email,
         password: this.state.password
       };
       localStorage.setItem("login", JSON.stringify(user));
       localStorage.setItem("status", true);
-      // let errorMessage = alert("Login Gagal");
+      alert("Login Sukses");
+      window.location = './index.html';
+    } else {
+      alert("Login Gagal");
       window.location = './';
     }
   }
 
   render() {
     return (
-      <Container style={{ width: "500px", marginTop: "75px" }}>
+      <Container style={{ width: "500px", marginTop: "75px", minHeight: "60vh" }}>
         <h4 style={{ fontWeight: "bold" }}>LOGIN</h4>
         <Row>
           <Col md="12" xs="12" className="box-fromlogin">
