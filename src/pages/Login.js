@@ -26,9 +26,6 @@ export default class Login extends Component {
     } else if (password === "") {
       alert("Password tidak boleh kosong");
     } else if (email === user.email && password === user.password) {
-      alert("Login Sukses");
-      window.location = './index.html';
-    } else {
       const user = {
         email: this.state.email,
         password: this.state.password
@@ -36,13 +33,17 @@ export default class Login extends Component {
       localStorage.setItem("login", JSON.stringify(user));
       localStorage.setItem("status", true);
       // let errorMessage = alert("Login Gagal");
+      alert("Login Sukses");
+      window.location = './';
+    } else if (da){
+      alert("Email atau password anda salah !")
       window.location = './';
     }
   }
 
   render() {
     return (
-      <Container style={{ width: "500px", marginTop: "75px" }}>
+      <Container style={{ width: "500px", marginTop: "75px", minHeight: ""}}>
         <h4 style={{ fontWeight: "bold" }}>LOGIN</h4>
         <Row>
           <Col md="12" xs="12" className="box-fromlogin">

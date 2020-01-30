@@ -62,8 +62,8 @@ export default class Profile extends Component {
             />
             <CardBody>
               <h4 style={{ textAlign: "center", fontWeight: "bold" }}>{item1.name}</h4>
-              <CardTitle style={{ textAlign: "center" }}>
-                github.com/{item2.login}
+              <CardTitle style={{ textAlign: "center", fontWeight: "bold" }}>
+                github.com/{item1.login}
               </CardTitle>
               <CardSubtitle style={{ textAlign: "center" }}>
                 never stop believin'
@@ -84,11 +84,11 @@ export default class Profile extends Component {
               style={{ borderRadius: "50%" }}
             />
             <CardBody>
-              <h4 style={{ textAlign: "center" }}>{item2.name} Muhammad</h4>
+              <h4 style={{ textAlign: "center", fontWeight: "bold"}}>{item2.name} Muhammad</h4>
               <CardTitle style={{ textAlign: "center", fontWeight: "bold" }}>
                 github.com/{item2.login}
               </CardTitle>
-              <CardSubtitle style={{ textAlign: "center" }}>
+              <CardSubtitle style={{ textAlign: "center"}}>
                 {item2.bio}
                 <br />
                 {item2.id}
