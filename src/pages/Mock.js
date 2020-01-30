@@ -145,10 +145,10 @@ export default function Mock() {
         })}
       </Container>
       <Modal isOpen={modal} toggle={toggle}>
-        <ModalHeader>Want to edit name ?</ModalHeader>
+        <ModalHeader>Want to edit your job ?</ModalHeader>
         <ModalBody>
           <input
-            placeholder="edit disini"
+            placeholder="think carefully before editing"
             onChange={handleChangeModal}
             value={inputModal}
           />
