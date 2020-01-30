@@ -37,112 +37,21 @@ export default function Bebas() {
       });
   };
 
-  const handleRemove = index => {
-    const newId = index;
-    const url = `${urlAll}/`;
-    axios
-      .delete(url + newId)
-      .then(res => {
-        getData();
-        console.log(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-
-    console.log(newId);
-  };
-
-  const handleUpdate = index => {
-    const newName = prompt("New Name : ");
-    if (newName === null) {
-      return
-    }
-    const url = `${urlAll}/${index}`;
-    const user = {
-      id: index,
-      name: newName
-    };
-
-    axios
-      .put(url, user)
-      .then(res => {
-        getData();
-        console.log(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-
-    console.log(allData);
-  };
-
-  const handleUpdateImages = index => {
-    const newAvatar = prompt("URL Images : ");
-    // alert(index);
-    const url = `${urlAll}/${index}`;
-    const user = {
-      avatar: newAvatar
-    };
-
-    axios.put(url, user)
-      .then(res => {
-        getData();
-        console.log(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-
-    console.log(allData);
-  };
-
-  const handleChange = e => {
-    setName(e.target.value);
-    console.log(e.target.value);
-  }
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    axios
-      .post(`${urlAll}`, {
-        name: name
-      })
-      .then(res => {
-        getData();
-        console.log(res);
-        console.log(res.data);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  };
-
   return (
     <Container style={{ marginTop: "20px" }}>
-      <Fragment>
-        <Col md="12" xs="12">
-          <form onSubmit={handleSubmit} className='mt-4'>
-            <Row>
-              <Col md={12}>
-                <input className='form-control' type='text' name='name' value={name} onChange={handleChange} placeholder='Your Name' />
-              </Col>
-            </Row>
-            <button className='btn btn-success btn-block mt-2' type="submit">POST</button>
-          </form>
+      <Col md="12" xs="12">
+        <Row>
+          {allData.map((item, index) => {
+            return (
+              <Col key={index} md="3" sm="6" xs="12" className="cardz">
+                <Card>
+                  <CardImg top width="100%" src={item.urls.small} alt="Card image cap" />
+                  <CardBody>
+                    <CardTitle>{item.description}</CardTitle>
+                    <CardSubtitle>{item.alt_description}</CardSubtitle>
+                    <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
 
-          <Row>
-            {allData.map((item, index) => {
-              return (
-                <Col key={index} md="3" sm="6" xs="12" className="cardz">
-                  <Card>
-                    <CardImg top width="100%" src={item.urls.small} alt="Card image cap" />
-                    <CardBody>
-                      <CardTitle>{item.description}</CardTitle>
-                      <CardSubtitle>{item.alt_description}</CardSubtitle>
-                      <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-
-                      {/* <Button color="success" onClick={() => handleUpdate(item.id)} > Edit </Button>
+                    {/* <Button color="success" onClick={() => handleUpdate(item.id)} > Edit </Button>
                       <Button color="primary" onClick={() => handleUpdateImages(item.id)} >Edit Img</Button>
                       <Button
                         color="danger"
@@ -150,15 +59,14 @@ export default function Bebas() {
                       >
                         Remove
                         </Button> */}
-                    </CardBody>
-                  </Card>
+                  </CardBody>
+                </Card>
 
-                </Col>
-              );
-            })}
-          </Row>
-        </Col>
-      </Fragment>
+              </Col>
+            );
+          })}
+        </Row>
+      </Col>
     </Container>
   );
 }
