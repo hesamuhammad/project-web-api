@@ -27,13 +27,13 @@ export default class Login extends Component {
     const { email, password } = this.state;
     let userSave = JSON.parse(localStorage.getItem('user'));
 
-    if (userSave == null) {
-      alert("Anda Belum Register");
-      window.location = './registration';
-    } else if (email === "") {
+    if (email === "") {
       alert("Email tidak boleh kosong");
     } else if (password === "") {
       alert("Password tidak boleh kosong");
+    } else if (userSave == null) {
+      alert("Anda Belum Register");
+      window.location = './registration';
     } else if (user.email === userSave.email && user.password === userSave.password) {
       const user = {
         email: this.state.email,
