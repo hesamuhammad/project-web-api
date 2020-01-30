@@ -47,7 +47,7 @@ const Navreactstrap = () => {
               </React.Fragment>
             ) : (
                 <React.Fragment>
-                  <NavItem className="navbar-nav ml-auto">
+                  <NavItem>
                     <NavLink href="/login">Login</NavLink>
                   </NavItem>
                   <NavItem>
