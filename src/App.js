@@ -8,7 +8,7 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
 import Mock from './pages/Mock'
-import Copyright from './components/Copyright';
+// import Copyright from './components/Copyright';
 
 function App() {
   const isLogin = JSON.parse(localStorage.getItem("status"));
@@ -17,7 +17,7 @@ function App() {
       <Header />
 
       <Switch>
-        <Route exact path="/home">
+        <Route exact path="/">
           <Home />
         </Route>
         <Route exact path="/mock">
