@@ -5,9 +5,10 @@ import Header from './components/Header';
 import Bebas from './pages/Bebas';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Mock from './pages/Mock';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
+import Mock from './pages/Mock'
+import Copyright from './components/Copyright';
 
 function App() {
   const isLogin = JSON.parse(localStorage.getItem("status"));
@@ -19,6 +20,9 @@ function App() {
         <Route exact path="/home">
           <Home />
         </Route>
+            <Route exact path="/mock">
+              <Mock />
+            </Route>
 
         {/* jika sudah login */}
         {isLogin ? (
@@ -27,9 +31,6 @@ function App() {
               <Profile />
             </Route>
 
-            <Route exact path="/mock">
-              <Mock />
-            </Route>
 
             <Route exact path="/bebas">
               <Bebas />
@@ -49,6 +50,7 @@ function App() {
           )}
 
       </Switch>
+      <Copyright/>
     </Router>
   );
 }
