@@ -42,8 +42,8 @@ export default class Login extends Component {
 
   render() {
     return (
-      <Container style={{width: "500px", marginTop: "75px"}}>
-        <h4 style={{fontWeight: "bold"}}>LOGIN</h4>
+      <Container style={{ width: "500px", marginTop: "75px" }}>
+        <h4 style={{ fontWeight: "bold" }}>LOGIN</h4>
         <Row>
           <Col md="12" xs="12" className="box-fromlogin">
             <Form onSubmit={this.handleSubmit}>

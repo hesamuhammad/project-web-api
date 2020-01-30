@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import {
   Carousel,
   CarouselItem,
@@ -7,6 +7,7 @@ import {
   CarouselCaption,
   Container
 } from 'reactstrap';
+
 
 const items = [
   {
@@ -26,7 +27,7 @@ const items = [
   }
 ];
 
-const Example = (props) => {
+const Example = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -54,7 +55,7 @@ const Example = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img className="imgslider" src={item.src} alt={item.altText} 
+        <img className="imgslider" src={item.src} alt={item.altText}
         />
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       </CarouselItem>
@@ -62,30 +63,31 @@ const Example = (props) => {
   });
 
   return (
-    <div>
-    
-    <Container
-    style={{marginTop: "50px", paddingBottom: "80px"}}>
-      <div style={{display: "flex", alignItems: "center"}}>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Deutsche_Bahn_AG-Logo.svg/1280px-Deutsche_Bahn_AG-Logo.svg.png" alt='gambar logo' 
-      style={{width: "90px"}}/>
-      <h1
-      style={{marginLeft: "10px"}}>DATABASE Inc.</h1>
-      </div>
-      <h4 style={{fontStyle: "italic"}}>We gather database around the world...</h4>
-    <Carousel
-        activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-        
-      >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-        {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-      </Carousel>
-    </Container>
-    </div>
+    <Fragment>
+
+      <Container
+        style={{ marginTop: "50px", paddingBottom: "80px" }}>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Deutsche_Bahn_AG-Logo.svg/1280px-Deutsche_Bahn_AG-Logo.svg.png" alt='gambar logo'
+            style={{ width: "90px" }} />
+          <h1
+            style={{ marginLeft: "10px" }}>DATABASE Inc.</h1>
+        </div>
+        <h4 style={{ fontStyle: "italic" }}>We gather database around the world...</h4>
+        <Carousel
+          activeIndex={activeIndex}
+          next={next}
+          previous={previous}
+
+        >
+          <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+          {slides}
+          <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+          <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+        </Carousel>
+
+      </Container>
+    </Fragment>
   );
 }
 
