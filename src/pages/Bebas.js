@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Col,
@@ -8,14 +8,12 @@ import {
   CardTitle,
   CardSubtitle,
   CardText,
-  Button,
   CardImg
 } from "reactstrap";
 import axios from "axios";
 
 export default function Bebas() {
   const [allData, setAllData] = useState([]);
-  const [name, setName] = useState("");
   const urlAll = "https://api.unsplash.com/photos/?client_id=ad95db50f014a2929e44bbc127634c9f56f31e3ee7c81f1bc7dc2096370d6d09";
 
   useEffect(() => {
@@ -38,9 +36,9 @@ export default function Bebas() {
   };
 
   return (
-    <Container style={{ marginTop: "20px", marginTop: "70px" }}>
+    <Container style={{ marginTop: "70px" }}>
       <Col md="12" xs="12">
-      <h2>Our Portofolio</h2>
+        <h2>Our Portofolio</h2>
         <Row>
           {allData.map((item, index) => {
             return (

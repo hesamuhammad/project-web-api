@@ -17,42 +17,42 @@ const Navreactstrap = () => {
           <Col md="12" xs="12" className="logo-box centerbox">
             <span>
               <span className="page">
-                <a target="_blank">
+                <a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
                   <img src="https://d33wubrfki0l68.cloudfront.net/87fb5c4e76b5bf174d86149b410d405156acf1b7/70d74/static/assets/icons/facebook.png" alt="Facebook" />
                 </a>
               </span>
               <span className="page">
-                <a target="_blank">
+                <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
                   <img src="https://d33wubrfki0l68.cloudfront.net/264572bffc6a1ec7181f9c327dfed3f22d95a648/a63d8/static/assets/icons/instagram.png" alt="Instagram" />
                 </a>
               </span>
               <span className="page">
-                <a target="_blank">
+                <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
                   <img src="https://d33wubrfki0l68.cloudfront.net/5130d257403c789e690c6e2413e4a4d070c89e70/4d510/static/assets/icons/linkedin.png" alt="LinkedIn" />
                 </a>
               </span>
-              <span className="page">
-                <a target="_blank">
+              <span className="github">
+                <a href="http://github.com" target="_blank" rel="noopener noreferrer">
                   <img src="https://d33wubrfki0l68.cloudfront.net/22b06d223b1db5accada10b61c3d7ca751102ec7/1cd03/static/assets/icons/github.png" alt="GitHub" />
                 </a>
               </span>
               <span className="page">
-                <a target="_blank">
+                <a href="http://twitter.com" target="_blank" rel="noopener noreferrer">
                   <img src="https://d33wubrfki0l68.cloudfront.net/b2407043dc50cdd630c0486f32101c1b35150ed6/3012f/static/assets/icons/twitter.png" alt="Twitter" />
                 </a>
               </span>
               <span className="page">
-                <a target="_blank">
+                <a href="http://google.com" target="_blank" rel="noopener noreferrer">
                   <img src="https://d33wubrfki0l68.cloudfront.net/ec6a961f470ef0e42e6ae70b4f29bbaaba6bdfa5/28f8c/static/assets/icons/googleplus.png" alt="Google+" />
                 </a>
               </span>
               <span className="page">
-                <a target="_blank">
+                <a href="http://coursereport.com" target="_blank" rel="noopener noreferrer">
                   <img src="https://d33wubrfki0l68.cloudfront.net/2b7e43f97c55aa0897ec4c984253e86da3eeaf9b/2c875/static/assets/icons/coursereport.png" alt="Course Report" />
                 </a>
               </span>
               <span className="page">
-                <a target="_blank">
+                <a href="http://switchup.com" target="_blank" rel="noopener noreferrer">
                   <img src="https://d33wubrfki0l68.cloudfront.net/805fa087b65f9ccc889416e3d939e3e7487205a0/57859/static/assets/icons/switchup.png" alt="SwitchUp" />
                 </a>
               </span>
