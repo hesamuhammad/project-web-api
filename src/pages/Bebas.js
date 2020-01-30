@@ -47,7 +47,7 @@ export default function Bebas() {
                 <Card>
                   <CardImg top width="100%" src={item.urls.small} alt="Card image cap" />
                   <CardBody>
-                    <CardTitle>{item.description}</CardTitle>
+                    <CardTitle><h4 style={{ borderBottom: "1px solid #dfdfdf" }}>{item.description}</h4></CardTitle>
                     <CardSubtitle>{item.alt_description}</CardSubtitle>
                     <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
                   </CardBody>
