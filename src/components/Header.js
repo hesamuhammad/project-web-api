@@ -27,7 +27,7 @@ const Navreactstrap = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
                 <NavItem>
-                  <NavLink href="/profile">Founder</NavLink>
+                  <NavLink href="/profile">About Us</NavLink>
                 </NavItem>
             {isLogin ? (
               <React.Fragment>
