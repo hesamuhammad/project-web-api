@@ -50,15 +50,6 @@ export default function Bebas() {
                     <CardTitle>{item.description}</CardTitle>
                     <CardSubtitle>{item.alt_description}</CardSubtitle>
                     <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-
-                    {/* <Button color="success" onClick={() => handleUpdate(item.id)} > Edit </Button>
-                      <Button color="primary" onClick={() => handleUpdateImages(item.id)} >Edit Img</Button>
-                      <Button
-                        color="danger"
-                        onClick={() => handleRemove(item.id)}
-                      >
-                        Remove
-                        </Button> */}
                   </CardBody>
                 </Card>
 
