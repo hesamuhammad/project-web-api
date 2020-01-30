@@ -33,7 +33,7 @@ export default function Mock() {
 
   const ambilData = async () => {
     const response = await axios.get(
-      "http://5e3134bf576f9d0014d644c4.mockapi.io/user"
+      "https://5e3134bf576f9d0014d644c4.mockapi.io/user"
     );
     const data = await response.data;
     setData(data);
@@ -43,7 +43,7 @@ export default function Mock() {
   const handleSubmit = async e => {
     e.preventDefault();
 
-    await axios.post("http://5e3134bf576f9d0014d644c4.mockapi.io/user", {
+    await axios.post("https://5e3134bf576f9d0014d644c4.mockapi.io/user", {
       name: input
     });
     await setInput("");
@@ -63,7 +63,7 @@ export default function Mock() {
     console.log("input modal", inputModal);
     const id = idUser;
     await axios.put(
-      `http://5e3134bf576f9d0014d644c4.mockapi.io/user/${id}`,
+      `https://5e3134bf576f9d0014d644c4.mockapi.io/user/${id}`,
       {
         job: inputModal
       }
@@ -76,7 +76,7 @@ export default function Mock() {
   const handleDelete = async id => {
     console.log("id", id);
     await axios.delete(
-      `http://5e3134bf576f9d0014d644c4.mockapi.io/user/${id}`
+      `https://5e3134bf576f9d0014d644c4.mockapi.io/user/${id}`
     );
     await ambilData();
   };
