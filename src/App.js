@@ -17,7 +17,7 @@ function App() {
       <Header />
 
       <Switch>
-        <Route exact path="/home">
+        <Route exact path="/">
           <Home />
         </Route>
             <Route exact path="/mock">

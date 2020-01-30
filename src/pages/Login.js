@@ -36,7 +36,7 @@ export default class Login extends Component {
       localStorage.setItem("login", JSON.stringify(user));
       localStorage.setItem("status", true);
       // let errorMessage = alert("Login Gagal");
-      window.location = './home';
+      window.location = './';
     }
   }
 

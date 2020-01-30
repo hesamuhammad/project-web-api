@@ -13,14 +13,14 @@ const Navreactstrap = () => {
   const toggle = () => setIsOpen(!isOpen);
   const logOut = () => {
     localStorage.setItem("status", false);
-    window.location = './home';
+    window.location = './';
   }
   const isLogin = JSON.parse(localStorage.getItem("status"));
 
   return (
     <div>
       <Navbar className="navigasiz" color="dark" dark expand="md">
-        <NavbarBrand href="/home">
+        <NavbarBrand href="/">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Deutsche_Bahn_AG-Logo.svg/1280px-Deutsche_Bahn_AG-Logo.svg.png" alt='gambar logo' /></NavbarBrand>
 
         <NavbarToggler onClick={toggle} />
