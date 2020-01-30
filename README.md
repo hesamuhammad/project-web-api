@@ -1,4 +1,4 @@
-# https://project-web-api.netlify.com/mock
+# https://project-web-api.netlify.com/
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
